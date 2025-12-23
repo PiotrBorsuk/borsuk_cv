@@ -1,0 +1,33 @@
+steps:
+- id: "Build Docker Image"
+  name: 'gcr.io/cloud-builders/docker:latest'
+  dir: 'app'
+  args: ['build',
+          '-t', 'europe-west1-docker.pkg.dev/${PROJECT_ID}/builds/borsuk-cv-img',
+          '.']
+
+- id: "Push Docker Image To Artifact Registry"
+  name: 'gcr.io/cloud-builders/docker:latest'
+  args: ['push', '--all-tags', 'europe-west1-docker.pkg.dev/${PROJECT_ID}/builds/borsuk-cv-img']
+
+- id: "Deploy Cloud Run Service"
+  name: 'gcr.io/cloud-builders/gcloud:latest'
+  args: [
+    'run', 'deploy', 'borsuk-cv-service',
+    '--service-account' , 'warranty-claims-form@warranty-claims-aps-dev.iam.gserviceaccount.com',
+    '--allow-unauthenticated',
+    '--memory', '1Gi',
+    '--platform', 'managed',
+    '--image', 'europe-west1-docker.pkg.dev/${PROJECT_ID}/builds/borsuk-cv-img',
+    '--timeout', '400',
+    '--min-instances', '0',
+    '--max-instances', '2',
+    '--ingress', 'all',
+    '--region', 'europe-central2',
+    ]
+
+
+timeout: 600s
+options:
+  logging: CLOUD_LOGGING_ONLY
+  dynamic_substitutions: true
