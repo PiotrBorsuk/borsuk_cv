@@ -39,6 +39,53 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.lang-btn:hover {
+    color: var(--text-main);
+    background: rgba(56, 189, 248, 0.1);
+}
+
+.lang-btn.active {
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.15);
+}
+
+.lang-divider {
+    color: #334155;
+    font-weight: 300;
+}
+
+/* Mobile language switcher */
+@media (max-width: 991px) {
+    .lang-switcher {
+        margin-left: 0;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #334155;
+        justify-content: center;
+    }
+}
+
 /* Hero - CV Header */
 .hero {
     padding: 120px 0 80px 0;
@@ -339,6 +386,17 @@ h1, h2, h3 {
 footer {
     background: var(--card-bg);
     border-top: 1px solid #334155;
+}
+
+/* Blink animation for terminal cursor */
+.blink {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
 
 @media (max-width: 768px) {

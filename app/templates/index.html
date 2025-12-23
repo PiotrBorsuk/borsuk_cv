@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +23,18 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">O mnie</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Umiejętności</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Doświadczenie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-lang-en="About" data-lang-pl="O mnie">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-lang-en="Skills" data-lang-pl="Umiejętności">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" data-lang-en="Experience" data-lang-pl="Doświadczenie">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#api">API</a></li>
                 </ul>
+
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">ENG</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="pl">PL</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -36,18 +43,16 @@
         <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <div class="profile-badge">
-                        <span class="dot"></span>
-                        Dostępny - Praca zdalna
+                    <div class="profile-badge" style="background: rgba(255, 193, 7, 0.15); border: 1px solid rgba(255, 193, 7, 0.3); color: #ffc107;">
+                        <span class="dot" style="background: #ffc107;"></span>
+                        <span data-lang-en="Active - 3 Months Notice" data-lang-pl="Aktywny - 3 mies. wypowiedzenia">Active - 3 Months Notice</span>
                     </div>
                     
                     <h1 class="name-title">Piotr Borsuk</h1>
                     <div class="role-title">Data Engineer</div>
                     
                     <p class="hero-description">
-                        Inżynier danych specjalizujący się w platformie chmurowej <strong>Google Cloud Platform</strong>. 
-                        Buduję skalowalne pipeline'y danych, automatyzuję procesy ETL i zarządzam infrastrukturą chmurową. 
-                        Przekształcam surowe dane w wartościowe insighty biznesowe.
+                        <span data-lang-en="Data Engineer specializing in <strong>Google Cloud Platform</strong>. I build scalable data pipelines, automate ETL processes, and manage cloud infrastructure. Transforming raw data into valuable business insights." data-lang-pl="Inżynier danych specjalizujący się w platformie chmurowej <strong>Google Cloud Platform</strong>. Buduję skalowalne pipeline'y danych, automatyzuję procesy ETL i zarządzam infrastrukturą chmurową. Przekształcam surowe dane w wartościowe insighty biznesowe.">Data Engineer specializing in <strong>Google Cloud Platform</strong>. I build scalable data pipelines, automate ETL processes, and manage cloud infrastructure. Transforming raw data into valuable business insights.</span>
                     </p>
 
                     <div class="contact-pills">
@@ -65,7 +70,7 @@
                         </a>
                         <span class="contact-pill">
                             <i class="fas fa-map-marker-alt"></i>
-                            Polska (Remote)
+                            <span data-lang-en="Poland (Remote)" data-lang-pl="Polska (Remote)">Poland (Remote)</span>
                         </span>
                     </div>
                 </div>
@@ -100,23 +105,19 @@
     <section id="about" class="py-5" style="background-color: #131c2e;">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-user text-accent me-3"></i>O mnie</h2>
+                <h2><i class="fas fa-user text-accent me-3"></i><span data-lang-en="About Me" data-lang-pl="O mnie">About Me</span></h2>
                 <div class="section-line"></div>
             </div>
 
             <div class="row">
                 <div class="col-lg-8 mb-4 mb-lg-0">
                     <div class="feature-card h-100">
-                        <h4 class="mb-4">Profil zawodowy</h4>
-                        <p style="font-size: 1.05rem; line-height: 1.8; color: #cbd5e1;">
-                            Jestem inżynierem danych z silnym zapleczem w ekosystemie Google Cloud Platform. 
-                            Specjalizuję się w projektowaniu i implementacji skalowalnych architektur danych, 
-                            orkiestracji procesów ETL oraz optymalizacji wydajności zapytań w BigQuery.
+                        <h4 class="mb-4" data-lang-en="Professional Profile" data-lang-pl="Profil zawodowy">Professional Profile</h4>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: #cbd5e1;" data-lang-en="I am a Data Engineer with a strong background in the Google Cloud Platform ecosystem. I specialize in designing and implementing scalable data architectures, orchestrating ETL processes, and optimizing query performance in BigQuery." data-lang-pl="Jestem inżynierem danych z silnym zapleczem w ekosystemie Google Cloud Platform. Specjalizuję się w projektowaniu i implementacji skalowalnych architektur danych, orkiestracji procesów ETL oraz optymalizacji wydajności zapytań w BigQuery.">
+                            I am a Data Engineer with a strong background in the Google Cloud Platform ecosystem. I specialize in designing and implementing scalable data architectures, orchestrating ETL processes, and optimizing query performance in BigQuery.
                         </p>
-                        <p style="font-size: 1.05rem; line-height: 1.8; color: #cbd5e1;">
-                            Moim celem jest dostarczanie czystych, dobrze udokumentowanych i przetestowanych 
-                            rozwiązań, które pozwalają organizacjom podejmować lepsze decyzje biznesowe 
-                            w oparciu o dane. Cenię automatyzację, czysty kod i podejście Infrastructure as Code.
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: #cbd5e1;" data-lang-en="My goal is to deliver clean, well-documented, and tested solutions that enable organizations to make better business decisions based on data. I value automation, clean code, and an Infrastructure as Code approach." data-lang-pl="Moim celem jest dostarczanie czystych, dobrze udokumentowanych i przetestowanych rozwiązań, które pozwalają organizacjom podejmować lepsze decyzje biznesowe w oparciu o dane. Cenię automatyzację, czysty kod i podejście Infrastructure as Code.">
+                            My goal is to deliver clean, well-documented, and tested solutions that enable organizations to make better business decisions based on data. I value automation, clean code, and an Infrastructure as Code approach.
                         </p>
                     </div>
                 </div>
@@ -124,23 +125,23 @@
                 <div class="col-lg-4">
                     <div class="info-grid">
                         <div class="info-item">
-                            <div class="label">Wykształcenie</div>
+                            <div class="label" data-lang-en="Education" data-lang-pl="Wykształcenie">Education</div>
                             <div class="value">
                                 <i class="fas fa-graduation-cap text-accent me-2"></i>
-                                Uniwersytet Gdański<br>
-                                <small class="text-muted">Ekonomia</small>
+                                <span data-lang-en="University of Gdańsk" data-lang-pl="Uniwersytet Gdański">University of Gdańsk</span><br>
+                                <small class="text-muted" data-lang-en="Economics" data-lang-pl="Ekonomia">Economics</small>
                             </div>
                         </div>
                         <div class="info-item">
-                            <div class="label">Lokalizacja</div>
+                            <div class="label" data-lang-en="Location" data-lang-pl="Lokalizacja">Location</div>
                             <div class="value">
                                 <i class="fas fa-globe text-accent me-2"></i>
-                                Polska<br>
+                                <span data-lang-en="Poland" data-lang-pl="Polska">Poland</span><br>
                                 <small class="text-muted">100% Remote</small>
                             </div>
                         </div>
                         <div class="info-item">
-                            <div class="label">Język angielski</div>
+                            <div class="label" data-lang-en="English" data-lang-pl="Język angielski">English</div>
                             <div class="value">
                                 <i class="fas fa-language text-accent me-2"></i>
                                 B2<br>
@@ -148,10 +149,10 @@
                             </div>
                         </div>
                         <div class="info-item">
-                            <div class="label">Dostępność</div>
+                            <div class="label" data-lang-en="Availability" data-lang-pl="Dostępność">Availability</div>
                             <div class="value">
                                 <i class="fas fa-calendar-check text-accent me-2"></i>
-                                Od zaraz<br>
+                                <span data-lang-en="3 Months Notice" data-lang-pl="3 mies. wypowiedzenia">3 Months Notice</span><br>
                                 <small class="text-muted">Full-time</small>
                             </div>
                         </div>
@@ -164,7 +165,7 @@
     <section id="skills" class="py-5">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-code text-accent me-3"></i>Umiejętności techniczne</h2>
+                <h2><i class="fas fa-code text-accent me-3"></i><span data-lang-en="Technical Skills" data-lang-pl="Umiejętności techniczne">Technical Skills</span></h2>
                 <div class="section-line"></div>
             </div>
 
@@ -185,7 +186,7 @@
                         </div>
 
                         <div class="skill-category">
-                            <div class="skill-category-title">Języki & Narzędzia</div>
+                            <div class="skill-category-title" data-lang-en="Languages & Tools" data-lang-pl="Języki & Narzędzia">Languages & Tools</div>
                             <div class="skill-tags">
                                 <span class="skill-tag primary">Python</span>
                                 <span class="skill-tag primary">SQL</span>
@@ -196,7 +197,7 @@
                         </div>
 
                         <div class="skill-category">
-                            <div class="skill-category-title">Orkiestracja & ETL</div>
+                            <div class="skill-category-title" data-lang-en="Orchestration & ETL" data-lang-pl="Orkiestracja & ETL">Orchestration & ETL</div>
                             <div class="skill-tags">
                                 <span class="skill-tag primary">Apache Airflow</span>
                                 <span class="skill-tag">Cloud Composer</span>
@@ -217,7 +218,7 @@
                         </div>
 
                         <div class="skill-category mb-0">
-                            <div class="skill-category-title">Wizualizacja & Zarządzanie</div>
+                            <div class="skill-category-title" data-lang-en="Visualization & Management" data-lang-pl="Wizualizacja & Zarządzanie">Visualization & Management</div>
                             <div class="skill-tags">
                                 <span class="skill-tag">Looker Studio</span>
                                 <span class="skill-tag">REST API</span>
@@ -230,7 +231,7 @@
 
                 <div class="col-lg-4 mt-4 mt-lg-0">
                     <div class="feature-card">
-                        <h5 class="mb-4">Kluczowe kompetencje</h5>
+                        <h5 class="mb-4" data-lang-en="Key Competencies" data-lang-pl="Kluczowe kompetencje">Key Competencies</h5>
                         
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-2">
@@ -290,18 +291,18 @@
     <section id="experience" class="py-5">
         <div class="container">
             <div class="section-header">
-                <h2><i class="fas fa-briefcase text-accent me-3"></i>Doświadczenie zawodowe</h2>
+                <h2><i class="fas fa-briefcase text-accent me-3"></i><span data-lang-en="Work Experience" data-lang-pl="Doświadczenie zawodowe">Work Experience</span></h2>
                 <div class="section-line"></div>
             </div>
             
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="text-accent small fw-bold">paź 2024 - Obecnie</span>
+                    <span class="text-accent small fw-bold" data-lang-en="Oct 2024 - Present" data-lang-pl="paź 2024 - Obecnie">Oct 2024 - Present</span>
                     <h3 class="mt-2">Data Engineer</h3>
                     <h5 class="text-muted">LPP S.A. (Reserved)</h5>
-                    <p class="mt-3" style="color: #cbd5e1;">
-                        Tworzenie narzędzia w Cloud Run wyciągającego dane od różnych dostawców api marketingowych (Meta, Google Ads, TikTok Ads, Pinterest) i ekstrakcji do Big Query. Automatyzacja procesów przy użyciu Airflow. Budowa customowych aplikacji webowych do pomocy osobom nietechnicznym w modelowaniu przy użyciu bibioteki Meridian. Zarządzanie infrastrukturą GCP przy użyciu IAM oraz Cloud Build do CI/CD.
+                    <p class="mt-3" style="color: #cbd5e1;" data-lang-en="Building Cloud Run tools for extracting data from various marketing API providers (Meta, Google Ads, TikTok Ads, Pinterest) and loading into BigQuery. Process automation using Airflow. Building custom web applications to help non-technical users with modeling using the Meridian library. Managing GCP infrastructure using IAM and Cloud Build for CI/CD." data-lang-pl="Tworzenie narzędzia w Cloud Run wyciągającego dane od różnych dostawców api marketingowych (Meta, Google Ads, TikTok Ads, Pinterest) i ekstrakcji do Big Query. Automatyzacja procesów przy użyciu Airflow. Budowa customowych aplikacji webowych do pomocy osobom nietechnicznym w modelowaniu przy użyciu bibioteki Meridian. Zarządzanie infrastrukturą GCP przy użyciu IAM oraz Cloud Build do CI/CD.">
+                        Building Cloud Run tools for extracting data from various marketing API providers (Meta, Google Ads, TikTok Ads, Pinterest) and loading into BigQuery. Process automation using Airflow. Building custom web applications to help non-technical users with modeling using the Meridian library. Managing GCP infrastructure using IAM and Cloud Build for CI/CD.
                     </p>
                     <div class="mt-3">
                         <span class="tech-tag">GCP</span>
@@ -320,11 +321,11 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="text-accent small fw-bold">lut 2024 - paź 2024</span>
+                    <span class="text-accent small fw-bold" data-lang-en="Feb 2024 - Oct 2024" data-lang-pl="lut 2024 - paź 2024">Feb 2024 - Oct 2024</span>
                     <h3 class="mt-2">Data Analyst</h3>
                     <h5 class="text-muted">LPP S.A. (Reserved)</h5>
-                    <p class="mt-3" style="color: #cbd5e1;">
-                        Tworzenie raportów sprzedażowych oraz ruchu na stronie w Looker Studio. Analiza danych przy wykorzystaniu Big Query. Modelowanie ekonometryczne przy wykorzystaniu biblioteki Robyn od Meta w R. Automatyzacja procesów przy użyciu Airflow. Tworzenie customowych workbenchów oraz VMs do pracy z modelowaniem.
+                    <p class="mt-3" style="color: #cbd5e1;" data-lang-en="Creating sales and website traffic reports in Looker Studio. Data analysis using BigQuery. Econometric modeling using Meta's Robyn library in R. Process automation using Airflow. Creating custom workbenches and VMs for modeling work." data-lang-pl="Tworzenie raportów sprzedażowych oraz ruchu na stronie w Looker Studio. Analiza danych przy wykorzystaniu Big Query. Modelowanie ekonometryczne przy wykorzystaniu biblioteki Robyn od Meta w R. Automatyzacja procesów przy użyciu Airflow. Tworzenie customowych workbenchów oraz VMs do pracy z modelowaniem.">
+                        Creating sales and website traffic reports in Looker Studio. Data analysis using BigQuery. Econometric modeling using Meta's Robyn library in R. Process automation using Airflow. Creating custom workbenches and VMs for modeling work.
                     </p>
                     <div class="mt-3">
                         <span class="tech-tag">GCP</span>
@@ -341,11 +342,11 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="text-accent small fw-bold">sie 2022 – mar 2024</span>
+                    <span class="text-accent small fw-bold" data-lang-en="Aug 2022 - Mar 2024" data-lang-pl="sie 2022 – mar 2024">Aug 2022 - Mar 2024</span>
                     <h3 class="mt-2">Junior E-commerce Data Analyst</h3>
                     <h5 class="text-muted">LPP S.A. (Reserved)</h5>
-                    <p class="mt-3" style="color: #cbd5e1;">
-                        Tworzenie raportów sprzedażowych oraz ruchu na stronie w Looker Studio. Analiza danych przy wykorzystaniu Big Query
+                    <p class="mt-3" style="color: #cbd5e1;" data-lang-en="Creating sales and website traffic reports in Looker Studio. Data analysis using BigQuery." data-lang-pl="Tworzenie raportów sprzedażowych oraz ruchu na stronie w Looker Studio. Analiza danych przy wykorzystaniu Big Query.">
+                        Creating sales and website traffic reports in Looker Studio. Data analysis using BigQuery.
                     </p>
                     <div class="mt-3">
                         <span class="tech-tag">Python</span>
@@ -361,10 +362,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <h2 class="mb-3">Dostęp przez <span class="text-accent">API</span></h2>
-                    <p class="text-muted mb-4">
-                        Jako inżynier danych rozumiem wagę dostępności danych. 
-                        Moje CV jest dostępne również jako REST API endpoint.
+                    <h2 class="mb-3"><span data-lang-en="Access via" data-lang-pl="Dostęp przez">Access via</span> <span class="text-accent">API</span></h2>
+                    <p class="text-muted mb-4" data-lang-en="As a data engineer, I understand the importance of data accessibility. My CV is also available as a REST API endpoint." data-lang-pl="Jako inżynier danych rozumiem wagę dostępności danych. Moje CV jest dostępne również jako REST API endpoint.">
+                        As a data engineer, I understand the importance of data accessibility. My CV is also available as a REST API endpoint.
                     </p>
                     <div class="alert border-secondary d-flex align-items-start" style="background: rgba(56, 189, 248, 0.1);" role="alert">
                         <i class="fas fa-terminal me-3 text-accent mt-1"></i>
@@ -423,6 +423,6 @@
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
