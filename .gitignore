@@ -1,2 +1,5 @@
 .venv
 __pycache__/
+*.tfstate
+*lock.hcl
+*DS_Store

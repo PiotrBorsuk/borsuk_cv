@@ -14,7 +14,7 @@ steps:
   name: 'gcr.io/cloud-builders/gcloud:latest'
   args: [
     'run', 'deploy', 'borsuk-cv-service',
-    '--service-account' , 'warranty-claims-form@warranty-claims-aps-dev.iam.gserviceaccount.com',
+    '--service-account' , 'cv-app-sa@piotr-borsuk-cv.iam.gserviceaccount.com',
     '--allow-unauthenticated',
     '--memory', '1Gi',
     '--platform', 'managed',
