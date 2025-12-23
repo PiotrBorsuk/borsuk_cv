@@ -1,9 +1,7 @@
 import os
 from flask import Flask, jsonify, render_template
 
-app = Flask(__name__, 
-            static_folder='.', 
-            template_folder='.')
+app = Flask(__name__)
 
 cv_data = {
     "status": "success",
