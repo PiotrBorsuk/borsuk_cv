@@ -51,3 +51,13 @@ resource "google_project_iam_member" "app_sa_invoker" {
   role    = "roles/run.invoker"
   member  = "serviceAccount:${google_service_account.app_sa.email}"
 }
+
+resource "google_artifact_registry_repository" "builds_repo" {
+  location      = var.region 
+  repository_id = "builds"
+  description   = "Docker repository for application builds"
+  format        = "DOCKER"
+  project       = var.project_id
+
+  depends_on = [google_project_service.enabled_apis]
+}

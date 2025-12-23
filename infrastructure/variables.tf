@@ -6,5 +6,5 @@ variable "project_id" {
 variable "region" {
   description = "Domyślny region dla zasobów"
   type        = string
-  default     = "europe-west2" 
+  default     = "europe-central2" 
 }
